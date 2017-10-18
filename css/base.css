@@ -4,6 +4,7 @@
 /*
 Primary: #204464
 Secondary: #5ea1b1
+Third: #2c3849
 Highlight: #fdb926
 Accent: #ff6e5b
 Background: #ffffff
@@ -13,6 +14,12 @@ Text: #313131
 /*=============================================
   Fonts
 ===============================================*/
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/product-sans/Product Sans Regular.ttf') format('truetype'), url('../fonts/product-sans/Product Sans Bold.ttf') format('truetype');
+}
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -46,60 +53,147 @@ h4,
 h5 {
   font-weight: 200;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background-color: #204464;
+}
 
 /*=============================================
   Helpers
 ===============================================*/
 .align-middle { vertical-align: middle; }
+.sb { font-weight: 400; }
 
 /*=============================================
   Nav
 ===============================================*/
-nav .nav-header .tagline {
-  display: block;
-  margin: -40px 0 40px 0;
-  color: rgba(255,255,255,0.8);
+nav {
+  color: #313131;
+}
+nav .nav-wrapper {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 nav .nav-header .header {
   font-weight: 200;
+  color: #fff;
+  margin: 1.1rem 0 1.6rem 0;
+  padding-bottom: 1.5rem;
 }
 nav .nav-header {
-  background-color: rgba(51,51,51,0.08);
-  padding-top: 10px;
+  background-color: #2c3849;
+  padding-top: 5px;
 }
 nav .nav-background {
-  background-color: #204464;
+  background-color: #fff;
+}
+.nav-wrapper a {
+  color: rgba(0,0,0,.54);
+}
+.nav-wrapper .logo-text {
+  color: #313131;
 }
 
 /*=============================================
   Content
 ===============================================*/
+.section {
+  position: relative;
+  padding: 64px 0;
+  height: 100%;
+  overflow: hidden;
+  z-index: 3;
+}
 .logo-text {
-  font-weight: 200;
-  letter-spacing: .7rem;
-  text-transform: uppercase;
-  padding-left: 10px;
+  font-family: 'Product Sans';
+  font-weight: bold;
+  letter-spacing: .1rem;
+  text-transform: capitalize;
+  padding-left: 5px;
+}
+.featured-content {
+  background-color: #204464;
+  color: #fff;
 }
 .feature-item {
   display: flex;
   align-items: center;
 }
+.item-card {
+  color: #313131;
+}
+.card,
+.card-panel,
+.card .card-image img {
+  border-radius: 4px;
+}
 #feature-one {
   flex-direction: row;
 }
-#feature-two {
-  flex-direction: row-reverse;
+.space-info {
+  background-color: #fdb926;
+  color: #fff;
 }
+.space-info .card-panel {
+  color: #000;
+}
+.contact {
+  background-color: #ff6e5b;
+  color: #fff;
+}
+#contact-form label {
+  color: rgba(255,255,255,0.5);
+  font-weight: 300;
+}
+#contact-form input,
+#contact-form textarea {
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+}
+#contact-form .input-field input[type=text]:focus + label,
+#contact-form .input-field textarea:focus + label {
+  color: #fff;
+}
+#contact-form .input-field input[type=text]:focus,
+#contact-form .input-field textarea:focus {
+  border-bottom: 2px solid #fff;
+}
+#contact-form .btn-large {
+  font-weight: 300;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  box-shadow: none;
+  border: 2px solid rgba(255,255,255,0.5);
+  box-sizing: content-box;
+  color: rgba(255,255,255,0.5);
+  webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#contact-form .btn-large:hover {
+  color: #fff;
+  border: 2px solid #fff;
+}
+
 
 /*=============================================
   Footer
 ===============================================*/
+footer .copyright {
+  color: #aaaaaa;
+}
+footer a {
+  color: #313131;
+}
 footer.page-footer {
-  background-color: #204464;
+  background-color: #fff;
+  color: #313131;
 }
 
 footer.page-footer .social-header {
-  font-weight: 200;
+  font-weight: 300;
 }
 
 /*=============================================
@@ -117,5 +211,15 @@ footer.page-footer .social-header {
   }
   .feature-item {
     flex-direction: column !important;
+  }
+}
+@media only screen and (max-width: 600px), only screen and (max-device-width: 641px) and (orientation: landscape){
+  .section {
+    height: auto;
+  }
+}
+@media only screen and (min-width: 601px){
+  nav.nav-extended .nav-wrapper {
+    min-height: 70px;
   }
 }

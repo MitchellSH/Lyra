@@ -23,6 +23,10 @@ function getSpaceDataForFun(){
 }
 
 function populateDOMWithFunData(data){
-  console.log('Success!');
   console.log(data);
+  $('#astroNum').text(data["number"]);
+  for(var i = 0; i < data["people"].length; i++){
+    $('#astroPeeps').append("<p>" + data["people"][i].name + "</p>");
+  }
+  $('#astroShip').text(data["people"][0].craft);
 }
