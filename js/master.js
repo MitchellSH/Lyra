@@ -10,7 +10,7 @@ function materialize(){
 }
 
 function getSpaceDataForFun(){
-  var src = "http://api.open-notify.org/astros.json";
+  var src = "//api.open-notify.org/astros.json";
   $.ajax({
     url: src,
     type: 'GET',
@@ -24,9 +24,9 @@ function getSpaceDataForFun(){
 
 function populateDOMWithFunData(data){
   console.log(data);
-  $('#astroNum').text(data["number"]);
-  for(var i = 0; i < data["people"].length; i++){
-    $('#astroPeeps').append("<p>" + data["people"][i].name + "</p>");
-  }
-  $('#astroShip').text(data["people"][0].craft);
+  // $('#astroNum').text(data["number"]);
+  // $('#astroShip').text(data["people"][0].craft);
+  // for(var i = 0; i < data["people"].length; i++){
+  //   $('#astroPeeps').append("<p>" + data["people"][i].name + "</p>");
+  // }
 }

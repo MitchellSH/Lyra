@@ -50,7 +50,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
   font-weight: 200;
 }
 html, body {
@@ -60,12 +61,32 @@ html, body {
 body {
   background-color: #204464;
 }
+p {
+  color: rgba(255,255,255,.80);
+  line-height: 30px;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  font-weight: 400;
+  color: #fff;
+  webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+a:hover {
+  color: #fdb926;
+}
 
 /*=============================================
   Helpers
 ===============================================*/
 .align-middle { vertical-align: middle; }
 .sb { font-weight: 400; }
+.no-pad-r-n-l { padding-left: 0px !important; padding-right: 0px !important; }
+.no-pad-top { padding-top: 0px !important; }
+.no-mar-top { margin-top: 0px !important; }
+.no-mar-bot { margin-bottom: 0px !important; }
+.italic { font-style: italic !important; }
 
 /*=============================================
   Nav
@@ -74,24 +95,26 @@ nav {
   color: #313131;
 }
 nav .nav-wrapper {
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  background-color: #fff;
 }
 nav .nav-header .header {
   font-weight: 200;
   color: #fff;
-  margin: 1.1rem 0 1.6rem 0;
+  padding-top: .2rem;
   padding-bottom: 1.5rem;
 }
 nav .nav-header {
   background-color: #2c3849;
   padding-top: 5px;
 }
-nav .nav-background {
-  background-color: #fff;
-}
 .nav-wrapper a {
+  webkit-transition: all 0.3s;
+  transition: all 0.3s;
   color: rgba(0,0,0,.54);
+}
+.nav-wrapper a:hover {
+  background: transparent;
+  color: #fdb926;
 }
 .nav-wrapper .logo-text {
   color: #313131;
@@ -114,15 +137,47 @@ nav .nav-background {
   text-transform: capitalize;
   padding-left: 5px;
 }
-.featured-content {
+.title-content {
+  background-image: url(../images/mdbg.png);
+  background-size: cover;
   background-color: #204464;
   color: #fff;
+  position: relative;
+  height: 95%;
+  overflow: hidden;
+}
+.title-content .subtitle {
+  font-weight: 300;
+}
+.title-content .subtitle span {
+  font-family: "Product Sans";
+}
+.title-content button:focus,
+.title-content button {
+  margin-top: 20px;
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  box-shadow: none;
+  border: 2px solid rgba(255,255,255,1.0);
+  box-sizing: content-box;
+  color: rgba(255,255,255,1.0);
+  webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.title-content button:active,
+.title-content button:hover {
+  background-color: #fdb926;
+  color: #fff;
+  border: 2px solid #fdb926;
 }
 .feature-item {
   display: flex;
   align-items: center;
 }
-.item-card {
+.item-card,
+.item-card p {
   color: #313131;
 }
 .card,
@@ -130,18 +185,16 @@ nav .nav-background {
 .card .card-image img {
   border-radius: 4px;
 }
-#feature-one {
+.featured-item {
   flex-direction: row;
+  background-color: #0C2C49;
 }
-.space-info {
-  background-color: #fdb926;
+.featured-content {
+  background-color: #0C2C49;
   color: #fff;
 }
-.space-info .card-panel {
-  color: #000;
-}
 .contact {
-  background-color: #ff6e5b;
+  background-color: #204464;
   color: #fff;
 }
 #contact-form label {
@@ -160,21 +213,28 @@ nav .nav-background {
 #contact-form .input-field textarea:focus {
   border-bottom: 2px solid #fff;
 }
-#contact-form .btn-large {
-  font-weight: 300;
+#contact-form .btn,
+#contact-form .btn:focus {
+  font-weight: 400;
   position: relative;
   overflow: hidden;
   background-color: transparent;
   box-shadow: none;
-  border: 2px solid rgba(255,255,255,0.5);
+  border: 2px solid rgba(255,255,255,1.0);
   box-sizing: content-box;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,1.0);
   webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-#contact-form .btn-large:hover {
+#contact-form .btn:active,
+#contact-form .btn:hover {
+  background-color: #fdb926;
   color: #fff;
-  border: 2px solid #fff;
+  border: 2px solid #fdb926;
+}
+.icon-content {
+  background-color: #031A2E;
+  color: #fff;
 }
 
 
@@ -185,6 +245,9 @@ footer .copyright {
   color: #aaaaaa;
 }
 footer a {
+  color: #313131;
+}
+footer p {
   color: #313131;
 }
 footer.page-footer {
