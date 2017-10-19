@@ -76,6 +76,9 @@ a {
 a:hover {
   color: #fdb926;
 }
+.btn-floating {
+  background-color: #fdb926;
+}
 
 /*=============================================
   Helpers
@@ -190,11 +193,13 @@ nav .nav-header {
   background-color: #0C2C49;
 }
 .featured-content {
+  background-image: url(../images/mdbgalt.png);
+  background-size: cover;
   background-color: #0C2C49;
   color: #fff;
 }
 .contact {
-  background-color: #204464;
+  background-color: #3C5F7F;
   color: #fff;
 }
 #contact-form label {
@@ -233,8 +238,12 @@ nav .nav-header {
   border: 2px solid #fdb926;
 }
 .icon-content {
+  /*padding: 85px 0 85px 0;*/
   background-color: #031A2E;
   color: #fff;
+}
+.blog-content {
+  background-color: #204464;
 }
 
 
@@ -263,6 +272,9 @@ footer.page-footer .social-header {
   Resizing
 ===============================================*/
 @media only screen and (max-width: 600px){
+  nav .brand-logo {
+    margin-top: -3px;
+  }
   nav .brand-logo .logo-img {
     width: 24px;
   }
