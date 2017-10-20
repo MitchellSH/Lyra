@@ -184,9 +184,12 @@ nav .nav-header {
   color: #313131;
 }
 .card,
-.card-panel,
-.card .card-image img {
+.card-panel {
   border-radius: 4px;
+}
+.card .card-image img {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 .featured-item {
   flex-direction: row;
@@ -271,7 +274,27 @@ footer.page-footer .social-header {
 /*=============================================
   Resizing
 ===============================================*/
+@media only screen and (min-width: 992px){
+  h1 {
+    font-size: 3.56rem;
+  }
+  h2 {
+    font-size: 2.92rem;
+  }
+  .container {
+    width: 90%;
+  }
+  .description {
+    text-align: center;
+  }
+}
 @media only screen and (max-width: 600px){
+  h1 {
+    font-size: 2.92rem;
+  }
+  h2 {
+    font-size: 2.28rem;
+  }
   nav .brand-logo {
     margin-top: -3px;
   }
@@ -280,9 +303,6 @@ footer.page-footer .social-header {
   }
   nav .brand-logo .logo-text {
     font-size: 1.64rem;
-  }
-  h1 {
-    font-size: 3.56rem;
   }
   .feature-item {
     flex-direction: column !important;
