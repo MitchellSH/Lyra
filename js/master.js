@@ -25,7 +25,7 @@ function getSpaceDataForFun(){
 
 function populateDOMWithFunData(data){
   console.log(data);
-  $('#coin').append("$" + data["bpi"]["USD"]["rate"].slice(0,-2));
+  $('#coin').append("<img style='margin-right: 20px;' width='40' src='images/bitcoin.svg' />" + data["bpi"]["USD"]["rate"].slice(0,-2));
   $('#code').append(data["bpi"]["USD"]["code"]);
   $('#type').append(data["chartName"]);
 }
