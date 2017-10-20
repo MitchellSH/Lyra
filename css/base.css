@@ -141,9 +141,9 @@ nav .nav-header {
   padding-left: 5px;
 }
 .title-content {
-  background-image: url(../images/mdbg.png);
-  background-size: cover;
-  background-color: #204464;
+  /*background-image: url(../images/mdbg.png);
+  background-size: cover;*/
+  /*background-color: #204464;*/
   color: #fff;
   position: relative;
   height: 95%;
@@ -248,6 +248,14 @@ nav .nav-header {
 .blog-content {
   background-color: #204464;
 }
+.coin-content {
+  background-color: #031A2E;
+  color: #fff;
+}
+#coin {
+  font-family: "Product Sans";
+  letter-spacing: .3rem;
+}
 
 
 /*=============================================
@@ -274,7 +282,7 @@ footer.page-footer .social-header {
 /*=============================================
   Resizing
 ===============================================*/
-@media only screen and (min-width: 992px){
+@media only screen and (max-width: 993px){
   h1 {
     font-size: 3.56rem;
   }

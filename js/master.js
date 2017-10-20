@@ -7,10 +7,11 @@ function initialize(){
 
 function materialize(){
   $(".button-collapse").sideNav();
+  $('.parallax').parallax();
 }
 
 function getSpaceDataForFun(){
-  var src = "//api.open-notify.org/astros.json";
+  var src = "//api.coindesk.com/v1/bpi/currentprice.json";
   $.ajax({
     url: src,
     type: 'GET',
@@ -24,9 +25,7 @@ function getSpaceDataForFun(){
 
 function populateDOMWithFunData(data){
   console.log(data);
-  // $('#astroNum').text(data["number"]);
-  // $('#astroShip').text(data["people"][0].craft);
-  // for(var i = 0; i < data["people"].length; i++){
-  //   $('#astroPeeps').append("<p>" + data["people"][i].name + "</p>");
-  // }
+  $('#coin').append("$" + data["bpi"]["USD"]["rate"].slice(0,-2));
+  $('#code').append(data["bpi"]["USD"]["code"]);
+  $('#type').append(data["chartName"]);
 }
