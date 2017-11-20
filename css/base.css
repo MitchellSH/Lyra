@@ -126,6 +126,16 @@ nav .nav-header {
 /*=============================================
   Content
 ===============================================*/
+.card .card-image a.btn-floating,
+.card .card-image a.btn-floating i {
+  webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.card .card-image a.btn-floating:hover,
+.card .card-image a.btn-floating i:hover {
+  background-color: #fff;
+  color: #fdb926 !important;
+}
 .section {
   position: relative;
   padding: 64px 0;
